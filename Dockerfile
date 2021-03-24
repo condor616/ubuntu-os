@@ -26,20 +26,20 @@ COPY bin/ /usr/local/bin/
 RUN mkdir ${APP_ROOT} && \
     chmod -R u+x /usr/local/bin && \
     chgrp -R 0 ${APP_ROOT} && \
-    chmod -R g=u ${APP_ROOT} /etc/passwd \
-    apk --update --no-cache -t .apache-rundeps add \
+    chmod -R g=u ${APP_ROOT} /etc/passwd
+
+RUN apt-get update -y && apt-get install -y \
         bash \
         ca-certificates \
         curl \
         findutils \
         make \
         libxml2-utils \
-        nghttp2 \
+#        nghttp2 \
         xmlstarlet \
         sqlite \
         tzdata \
-        util-linux \
-        sudo; \
+        util-linux;
 
 ### Containers should NOT run as root as a good practice
 USER 10001
