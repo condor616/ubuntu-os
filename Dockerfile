@@ -6,13 +6,13 @@ ENV SUMMARY="Official Ubuntu Docker image using OpenShift specific guidelines." 
     DESCRIPTION="Ubuntu is a Debian-based Linux operating system based on free software."
 
 ### Atomic/OpenShift Labels - https://github.com/projectatomic/ContainerApplicationGenericLabels
-LABEL name="https://github.com/jefferyb/openshift-ubuntu" \
+LABEL name="https://github.com/condor616/ubuntu-os.git" \
       maintainer="jeffery.rukundo@gmail.com" \
       summary="${SUMMARY}" \
       description="${DESCRIPTION}" \
 ### Required labels above - recommended below
-      url="https://github.com/jefferyb/openshift-ubuntu" \
-      help="For more information visit https://github.com/jefferyb/openshift-ubuntu" \
+      url="https://github.com/condor616/ubuntu-os.git" \
+      help="For more information visit https://github.com/condor616/ubuntu-os.git" \
       run='docker run -itd --name ubuntu -u 123456 jefferyb/openshift-ubuntu' \
       io.k8s.description="${DESCRIPTION}" \
       io.k8s.display-name="${SUMMARY}" \
